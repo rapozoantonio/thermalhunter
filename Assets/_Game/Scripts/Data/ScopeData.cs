@@ -12,8 +12,10 @@ public class ScopeData : ScriptableObject
     public string scopeName;
     [TextArea(2, 4)] public string description;
     public Sprite icon;
+    public GameObject scopePrefab;
 
     [Header("Optics")]
+    public float magnification = 4f;
     public float minZoom = 1f;
     public float maxZoom = 4f;
     public float fieldOfView = 45f;
@@ -25,9 +27,11 @@ public class ScopeData : ScriptableObject
 
     [Header("Thermal Settings")]
     public Gradient heatGradient;
+    public float thermalQuality = 1f;
     public float thermalResolution = 512f;
     public float noiseIntensity = 0.02f;
     public bool hasScanLines = true;
+    public float batteryDrainMultiplier = 1f;
 
     [Header("Reticle")]
     public Sprite reticleSprite;
